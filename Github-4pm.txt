@@ -1,0 +1,996 @@
+Github
+------
+Administration
+1. Account in Github
+   a. Create the profile
+   b. Create the organization
+   c. Create the repository
+   d. Create the team
+   e. Add the resources to the team
+
+Create the profile
+---------------------
+    --> login to the Github with credentials
+    --> select top right corner drop arrow
+    --> setting
+        Name
+          Wizdom Technologies
+
+      click on email settings
+          wizdomtech116@gmail.com
+
+    --> select update profile
+
+Create the Organization
+=======================
+      --> top right corner select plus symbol
+      --> select new organization
+      --> select create free organization
+		--> Organization account name
+                            oxsen-devopsteam
+                --> email id
+                        sreenip110@gmail.com
+		--> This organization belongs to
+                       my personel account (default)
+
+		--> verify
+		--> select the check box
+		--> select next
+		--> complete setup
+		--> select submit
+
+https://github.com --> public url 
+https://github.com/oxsen-devopsteam  --> this is organization url
+
+https://github.com/oxsen-devopsteam/teams/facebook-devteam
+
+Creating Repository
+-------------------
+	--> click on repository tab
+	--> click on create a new repository
+	--> repository name: facebook
+	--> description (optional)
+	--> select public
+
+Public--> means any one can ass the repository code
+          they can't able to modify or update the code. just they can only view
+
+Private--> They can't able to see the code or modify the code
+
+Q. Can we change public repository to private
+Ans: yes
+
+	--> select create repository
+
+https://github.com/wiz-devteam/facebook.git --> this is repository url
+
+github.com--> Source code management name
+oxsen-devopsteam--> Organization name
+facebook.git --> repository name
+
+Each repository has two url's
+
+https://github.com/wiz-devteam/facebook.git --> HTTPS url
+git@github.com:wiz-devteam/facebook.git  --> ssh url
+
+How to create private repository
+	--> click on the new organization
+        --> click on the repsitory tab
+        --> click on New Repository
+        --> Repository name: amazon
+            private(default)
+	--> create repository
+
+Creation of teams
+-----------------
+	--> select the teams tab
+	--> click on new team
+	--> Team name: devopsteam
+	--> team visibility(default)
+            visible 
+Visible--> the other team members also able to see how many developers are there in this perticular
+           team
+	--> select create team
+
+https://github.com/orgs/oxsen-devopsteam/teams/facebook-devteam --> team URL
+
+Adding the resources to the team
+--------------------------------
+	--> click on memebrs tab
+	--> click on add a member
+
+Provide the repository write access
+-----------------------------------
+       --> goto repository facebook-devteam
+       --> select repository tab
+       --> select add respository
+       --> wiz-devteam/facebook (add)
+		--> default is read --change to write
+	--> goto repository tab
+
+How to delete the repository
+----------------------------
+	--> click on repository tab
+	--> click on repository(amazon)
+	--> click on settings tab
+	--> scroll down
+	--> goto danger zone
+	--> click on Delete this repository
+
+If any project is on boarded
+	--> create the repository
+	--> create the teams
+	--> add the users to the team
+	--> provide the repository access to the team
+
+git/github
+github--> remote repository
+git --> local repository
+install the s/w gitbash
+git(local repository)
+---------------------
+$ git --version  --> to see the git version
+$ cd ~/Desktop
+$ mkdir facebook
+$ cd facebook
+$ git init   --> git initialization
+
+this command create a default directory called .git
+$ ls  -a
+    .git
+$ ls .git
+
+under .git directory it will create 3 logical areas
+
+Working area         Staging Area      Local Repository 
+------------         ------------      ---------------
+                      dbutilts.java
+                      stringsutilts.java
+                      depoly.sh
+
+abc.py
+$ git  add 
+$ git add abc.py
+
+$ git status  --> to see the files in which area
+$ vi DButilts.java
+  This file contains DB related stuff
+  save the file
+
+$ vi Stringsutilts.java
+This file contains Strings realted stuff
+  save the file
+
+$ vi deploy.sh
+This filec containd Development scripts
+save the file
+
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Stringsutilts.java
+        deploy.sh
+        DButilts.java
+these files are red colour --> working area
+
+Working area         Staging Area      Local Repository --->  Remote Repository(Github)
+------------         ------------      ---------------
+                                       dbutilts.java
+			               stringsutilts.java
+			               depoly.sh
+
+User@WIZDOM1 MINGW64 ~/Desktop/oxsen (master)
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+User@WIZDOM1 MINGW64 ~/Desktop/oxsen (master)
+
+To move the files from working area to staging area
+git add command
+	$ git add
+	$ git add .
+	$ git add *
+	$ git add *.java
+	$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:     --> in green color
+		    	dbutilts.java
+			stringsutilts.java
+			depoly.sh
+
+
+User@WIZDOM1 MINGW64 ~/Desktop/oxsen (master)
+
+Working area         Staging Area         Local Repository 
+		                	dbutilts.java
+                		     	stringsutilts.java
+                     			depoly.sh
+
+IDE --editor
+The popular IDE tools are
+	Eclipse
+	Myeclipse
+	Intellij
+	vsc(visual studio code)
+	atom
+
+8309540541
+
+Front end tecnlogies
+	html, java script, csh, nodejs, ruby
+
+The files which are in staging are eligible for commit
+once these files are commit it will move to the local repository
+
+$ git add .
+warning: in the working copy of 'Stringsutilts.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'deploy.sh', LF will be replaced by CRLF the next time Git touches it
+
+User@WIZDOM1 MINGW64 ~/Desktop/oxsen (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   DButilits.java
+        new file:   Stringsutilts.java
+        new file:   deploy.sh
+
+git --> VCS
+User@WIZDOM1 MINGW64 ~/Desktop/oxsen (master)
+
+git commit  --> to commit the files in staging area
+   	$ git commit -m <message>
+        $ git commit -m "First Commit"
+
+Before you commit these files we've to configure username and mail-id
+ 	$ git config --global user.name "oxsenit"
+        $ git config --global user.email "sreenip110@gmail.com"
+
+To check username and mail id
+	$ git config --list
+	$ git config --global --list
+
+git push  --> upload the remote repsitory
+git pull --> download from the remote repository
+
+git remote add --> to map remote repository url with local repositor
+To map the remote repository to the local repository
+$ git remote add zomato https://github.com/oxsenone-devopsteam/zomato.git
+
+To see the remote repositories
+$ git remote -v
+
+To get the remote repository rul
+--------------------------------
+	--> login to the github.com
+	--> click on right corner drop button
+	--> click on organization
+	--> select wizdom-devteam
+	--> click on repository tab
+	--> select facebook
+	--> select https url
+		https://github.com/wiz-devteam/facebook.git
+goto git bash
+	$ git remote add fb https://github.com/wiz-devteam/facebook.git
+origin--> default
+
+To know the remote repository url mapped or not
+	$ git remote -v
+
+	$ git push fb master --> to push the code from local repo to remote repo
+
+How to generate the token
+----------------------
+	--> login to the github.com
+	--> select top right corner
+	--> select settings
+	--> scroll down 
+	--> left pannel developer settings
+	--> click on developer settings
+	--> left panel click on personel access tokens
+	--> click on generate personel access tokens
+
+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 --> token
+
+	$ git push fb master
+          username: oxsenit
+	  password: paste the token
+
+	$ git push fb master
+          Everything up-to-date
+
+Create a new file
+        $ vi srinivas.txt
+          aaaaaaaaaaaaaaaaa
+          control d(save)
+        $ git status
+	$ cat >> deploy.sh
+         Updated newly deploy.sh file
+           control d
+	$ git add .     --> to move the files from working area to staging area
+	$ git status
+	
+	$ vi python.txt
+          This file contains python scripts
+           control d (save)
+	$ git status
+
+	$ git commit -m "Added new files"
+
+	$ git add python.txt
+	$ git status
+	$ git commit -m "Added python.txt"
+		[master e59c384] Added python.txt
+ 		1 file changed, 1 insertion(+)
+ 		create mode 100644 python.txt
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (master)
+	$ git status
+		On branch master
+		nothing to commit, working tree clean
+
+git log--> how many times we committed to the local repository
+
+head-->master  --> local repository branch
+  It is the pointer for current commit ID and current branch
+
+fb/master --> This is the remote repository branch
+
+	$ git push fb master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 715 bytes | 178.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/wiz-devteam/facebook.git
+   40ed7b9..e59c384  master -> master
+
+Goto remote repository refresh the page
+
+(HEAD -> master, fb/master)
+Master--> local repository
+fb/master --> remote repository
+
+Q. What is the command to see all the commit id's in your local repository
+   $ git log
+
+Q. What information going to display with git log command
+	commit id:
+	Author name:
+	email id:
+	when they comitted
+	what is the commit messge
+
+Q. to know which user and what time the file was commited to check that
+	goto github.com remote repository facebook
+	https://github.com/wiz-devteam/facebook  --> url
+	click on DButlits.java
+	click on right corner history
+
+How to see through git bash
+	$  git log DButilts.java
+commit 40ed7b94a7c7b3ee2036fe02327653776fe10a70
+Author: wizdomtechnoliges <wizdomtech116@gmail.com>
+Date:   Tue Aug 2 17:46:07 2022 +0530
+
+    First Commit
+
+	$ vi stringsutilts.java
+
+           added new line
+          save
+
+	$ git status
+		modified: stringsutilts.java
+
+Q. Can I commit the file from working are to local repository without moving to the 
+   staging area
+Ans: Yes, it is possible
+	$ git commit  -a -m "Updated stringsutilts.java"
+
+Note: It is going to work only existing files but not newly created files
+
+	$ vi devops.txt
+           Checking the Devops tools....
+
+	  save 
+
+	$ git commit  -a -m "Added a New file" --> it won't work
+
+	$ git add .
+
+	$ git commit -m "Added a New file"
+
+	$ git status
+
+	$ git push  fb  master
+
+Goto remote repository github and check the files
+-----------------------------------------------------------------------------------------------------------
+	$ git log
+
+To see the difference between first commit id and second commit id
+	$ git log
+
+9032aad097b  1st commit id
+
+ 0bc2d8652c1c5  2nd commit 
+
+git diff--> to see the difference between two commit ID's
+
+	$ git diff  01405ca1dd58   ab1c9077982a02
+
+Q. Can I move only one file from staging area to local repository
+Ans: Yes
+
+	$ git commit -m "First Commit" <file1>  <file2>
+
+Q. Can I push only one file or specific files from local repository to remote repository
+Ans: No
+        $ git push fb master <file1> <file2>   --> it won't work
+
+Q. Where the project related files are stored in windows and linux
+Ans: 
+     In windows
+	C:\users\user.wizdom1\Desktop\facebook\.git
+
+     In Linux
+        $ cd ~/Desktop/facebook/.git
+
+Q. How to know what are the remote repository map with local repository
+	$ git remote -v
+
+Note: suppose you added wrong url and you want to remove it
+	$ git remote remove fb  
+
+	$ git remote -v
+
+	$ git log  -2   --> to see only the first 2 logs
+
+git show --> to see how many files are commited in this commit id
+
+	$ git log
+             copy the commit id
+
+	$ git show  <paste the commit id>
+
+git show --pretty  --> to see the file names in that commit id
+
+To display only the file names
+	$ git show --pretty="" --name-only <paste the commit id>
+
+	$ vi deploy.sh
+          Updating this line.....
+          save
+
+        $ vi test.sh
+          This is the ASCII text file
+          save
+
+	$ git status
+
+	$  git add .
+
+Q. Can I get back the files from staging area to working area
+Ans: It's possible
+        $ git reset
+
+	$ git add .
+
+	$ git status
+
+git reset <file name> --> to get back a single file from staging area to working area
+	$ git reset test.sh
+
+	$ git status
+
+	$ git commit -m "Updated deploy.sh"
+[master 7e637f1] Updated deploy.sh
+ 1 file changed, 1 insertion(+)
+
+	$ git status
+
+	$ vi test.py
+          This file contains python scripts..
+          save
+
+	$ git status
+
+git clean  --> to remove all files from working area
+
+	$ git clean -n   --> for confirmation
+	$ git clean -f   --> remove all files from working area
+
+	$ vi test.sh
+           This file contains shell scripts...
+           save
+
+	$ vi deploy.sh
+          Adding new line for testing
+          save
+
+	$ git status
+
+	$ git add .
+	$ git commit -m "Added new files"
+
+	$  git push fb master
+84a6535
+	$ git log
+                 copy the commit id
+
+git revert---> The files which are newly created and which are modified in that commit id those will deleted
+          --> going to delete from local repository only
+          --> it won't delete the remote repository
+
+	$ git revert <paste the commit id>
+
+	$ ls
+                no test.sh file
+
+	$ git push fb  master  --> It's update the remote repository
+
+Q. Is it possible to revert the code or files from previous or old commit id's
+Ans: No possible
+
+Q. What is the difference between git reset  and git revert commands
+Ans: 
+    git reset --> to get back the files from staging area to working area
+    git revert --> the files which are newly create or updated in the commit ID, those
+                   files going to delete 
+
+Q. What is the difference between git and github
+Ans: git is the VCS(Version Control System) for each commit it is going to maintain a unique
+     commit ID's and version
+             1.0  -->  823rt89
+             2.0  -->  34u8ety
+	1.0 --> VCS
+	2.0---> VCS
+
+     github--> It is hosted service which will provide GUI and It's a remote repository
+               where you can store all the source code
+
+VCS --> git, svn(sub version) and TFS(Team Foundation Service)
+
+Q. What is the difference between git, svn and TFS
+Ans: Git is the Distributed Version Control System
+
+Q. what is DVCS
+       Each developer has their own local repository 
+	Developers will develop the code, commit the code and push the code to the remote
+        repository 
+
+Local	remote
+git	github
+	svn
+	tfs
+
+.gitignore(git ignore file)
+
+	--> goto organization
+	--> select the organization name
+	--> click on repository tab
+	--> click on new repository
+	--> there is an option called .gitignore
+
+IDE's
+	eclipse
+	myeclipse
+	atom 
+
+		.settings
+		.projects
+		.classpath
+
+nodejs   node_modules
+
+compiled java related files
+       .class
+         *.class
+
+	$ touch .projects
+	$ touch .classpath
+	$ mkdir node_modules
+	$ git status
+		.projects
+		.classpath
+
+	not showing node_modules directory because the direcotry is empty
+
+	$ cd node_modules
+	$ touch test.py
+	$ git status
+		.projects
+		.classpath
+		node_modules
+
+	$ vi .gitignore
+	     .projects
+	     .classpath
+             /node_modules
+	     
+	save the fil
+	$ git status
+		.gitignore
+	$ git add .
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (master)
+$ git commit -m "Added .gitinore files"
+[master 5a919f8] Added .gitinore files
+ 1 file changed, 3 insertions(+)
+ create mode 100644 .gitignore
+
+$ git push fb master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 105.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/wiz-devteam/facebook.git
+   851a7ce..5a919f8  master -> master
+
+Branches
+----------
+How to create the branches
+How to rename the branches
+How to delete the branches
+How to switch from one branch to another branch
+
+$ git branch	--> to see the current branch
+* master
+
+$ git branch development
+
+$ git branch
+  developement
+* master
+
+Q. Is it possible to switch from one branch to another branch
+Ans: yes
+     command is git checkout 
+
+$ git checkout developement
+Switched to branch 'developement'
+
+$ git branch
+* developement
+  master
+
+$ vi python.txt
+  Add a new line
+  This file is update in DEV environment
+  save
+
+$ $ git status
+On branch developement
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   python.txt
+
+$ git commit -a -m "updated python.txt file"
+warning: in the working copy of 'python.txt', LF will be replaced by CRLF the next time Git touches it
+[developement 74ef10f] updated python.txt file
+ 1 file changed, 1 insertion(+)
+
+$ git status
+On branch developement
+nothing to commit, working tree clean
+
+$ git branch
+* developement
+  master
+
+$ git checkout master
+Switched to branch 'master'
+
+$ git branch
+  developement
+* master
+
+$ cat python.txt
+
+How to get updated code from one branch to another branch in the local repository
+merge <branch name> 
+
+git diff --> to see the code difference between development branch and master branch
+
+$ git diff developement
+diff --git a/python.txt b/python.txt
+index 5637feb..c065da1 100644
+--- a/python.txt
++++ b/python.txt
+@@ -1,2 +1 @@
+ This file contains Python related scripts
+-This file is updating in Development Branch --> shows in red color
+
+$ git merge developement
+Updating 5a919f8..74ef10f
+Fast-forward
+ python.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (master)
+
+$ cat python.txt   --> you'll see the update code
+
+git diff --> to see the difference between both the commit ID's and branches as well
+------------------------------------------------------------------------------------------------------
+$ git branch
+  developement
+* master
+
+$ vi deploy.sh
+  Updating this line in Master branch
+  save the file
+
+$ git commit -a -m "Updated Deploy.sh file"
+[master 6a1c6f8] Updated Deploy.sh file
+ 1 file changed, 1 insertion(+)
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (master)
+
+$ cat deploy.sh
+This file contains the scripts related to deploy the application
+Again updating deploy.sh file
+Updating this line......
+Updating this line in Master Branch
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (master)
+$ git checkout developement
+Switched to branch 'developement'
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (developement)
+
+$ git branch
+* developement
+  master
+
+$ cat deploy.sh
+This file contains the scripts related to deploy the application
+Again updating deploy.sh file
+Updating this line......
+
+$ $ cat >> deploy.sh
+This line is updating in the Development Branch
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (developement)
+$ cat deploy.sh
+This file contains the scripts related to deploy the application
+Again updating deploy.sh file
+Updating this line......
+This line is updating in the Development Branch
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (developement)
+
+$ git commit -a -m "Updated in Dev Env"
+warning: in the working copy of 'deploy.sh', LF will be replaced by CRLF the next time Git touches it
+[developement c3d16d2] Updated in Dev Env
+ 1 file changed, 1 insertion(+)
+
+User@WIZDOM1 MINGW64 ~/Desktop/facebook (developement)
+
+git diff --> to see the difference between the two commit ID's and to branches
+
+$ git branch
+  development
+* master
+
+$ vi deploy.sh
+  Updating the file in Master Branch ...
+  save the file
+
+$ git checkout development
+Switched to branch 'development'
+M       deploy.sh
+
+git merge conflicts 
+
+Create the stage branch and switch to the stage branch
+$ git checkout -b stage
+
+Create the branches in remote repository
+
+git push fb master  --> to push all the branches from local repository to remote repository
+$ git push fb master stage development
+
+$ git push fb --all   --> to push all branches from local repository to remote repository
+
+Can I get the code from one branch to another branch from GUI i.e remote repository
+Ans: Yes
+
+How to delete the branch
+$ git branch -d stage
+Cannot delete the current branch
+
+How to rename the branch
+$ git branch -m staging
+
+To see the remote repository branches
+$ git branch -r
+  fb/development
+  fb/master
+  fb/stage
+
+To see all the branches local and remote
+$ git branch  -a
+
+To delete the branch from remote repository
+$ git push fb :developement
+
+git clean  --> to delete all the files(the files which are newly created) from working area
+
+gitrm <file name>  --> to remove the files from working area
+
+Tag
+----
+What is the difference between branch and tag
+
+Branch					Tag
+Mutable					Immutable
+On going development			after production deployment
+git branch				git tag
+git branch <branch name>		git tag <tag name>
+
+Mutable --> You can modify or edit the code
+
+Immutable --> Cannot edit or modify the code
+
+Q. On which branch your'e going to create the tag
+Ans: On master branch
+
+Why we've to tag on master branch
+We're deploying the code to the production from the master branch 
+
+git branch--> to create the branch
+git tag  --> to create the tag
+
+facebook
+facebookv1.0.0
+facebookv1.0.1
+facebookv1.0.2
+1 is the majar version
+0 is th minor version
+
+To see the tags
+$ git tag
+
+HP@DESKTOP-JJ31VHN MINGW64 ~/Desktop/facebook (stage)
+$
+$ git tag facebookv1.0.0
+
+HP@DESKTOP-JJ31VHN MINGW64 ~/Desktop/facebook (stage)
+$ git tag
+facebookv1.0.0
+
+To push the tag to the remote repository
+$ git push fb tag facebookv1.0.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/oxsen-devopsteam/facebook.git
+ * [new tag]         facebookv1.0.0 -> facebookv1.0.0
+
+$ git tag facebookv1.1.0
+          facebookv1.2.0
+
+To delete the tag from local repository
+$ git tag -d facebookv1.0.0
+Deleted tag 'facebookv1.0.0' (was 97ae524)
+
+Can I delete the tag from remote repository
+Ans: No
+
+Stash (git stash)
+------------------
+Development
+$ git stash
+temporary storage
+
+$ git checkout master
+$ git checkout development
+$ git stash apply
+
+$ git stash list
+  stash@{0}  --> 1st backup
+  stash@{1)  --> 2nd backup
+  stash@{2}  --> 3rd backup
+
+If you want to apply specific backup stash
+git stash apply <specify the index>
+
+To remove or delete the backup stash
+$ git stash drop  --> the recent one
+
+To delete the specific backup stash
+$ git stash drop <specify the index>
+
+git stash pop  --> restore the backup stash and delete it
+$ git stash pop <specify the index>
+
+git cherry-pick
+dc1
+dc2
+dc3
+dc4
+
+Development
+$ git commit 
+$ git checkout master
+Master
+$ git merge
+$ git log
+          CID
+
+$ git cherry-pic <CID>
+1e3e3ca17287b646
+
+git clone
+git pull
+git push
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
